@@ -1,0 +1,40 @@
+{
+	"name": "grunt-sass-globber",
+	"version": "1.0.0",
+	"description": "A grunt module which supports sass globbing.",
+	"main": "Gruntfile.js",
+	"dependencies": {
+		"sass-globber": "^1.0.0"
+	},
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-contrib-clean": "~0.5.0",
+		"grunt-contrib-jshint": "~0.8.0",
+		"grunt-contrib-nodeunit": "~0.3.0",
+		"time-grunt": "*",
+		"load-grunt-tasks": "^2.0.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sebastian-Fitzner/grunt-sass-globber.git"
+	},
+	"keywords": [
+		"sass",
+		"sass",
+		"globbing",
+		"sass-globbing",
+		"grunt",
+		"@import",
+		"grunt-globbing",
+		"grunt-sass"
+	],
+	"author": "Sebastian Fitzner",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Sebastian-Fitzner/grunt-sass-globber/issues"
+	},
+	"homepage": "https://github.com/Sebastian-Fitzner/grunt-sass-globber#readme"
+}
