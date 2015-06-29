@@ -7,6 +7,8 @@ This module provides a simple globbing functionality for sass files like the rub
 
 It reads a file from a defined directory and creates a new sass file with all `@import` statements.
 
+It also has a build-in watcher which watches your changes in your `sassRoot` directory. 
+
 ## Installation
 
 `npm install grunt-sass-globber`
@@ -94,7 +96,8 @@ Here is an example:
 ``` js
 sassGlobber: {
 	options: {
-		sassRoot: 'tmp/sass'
+		sassRoot: 'tmp/sass',
+		watch: true // or false
 	},
 
 	dev: {
@@ -107,21 +110,9 @@ sassGlobber: {
 ```
 
 ### Watch Task In Grunt
-When you add or delete a Sass file, you probably want to execute the globbing task. With simple events you can achieve this: 
 
-``` js
-watch: {
-	globbing: {
-        options: {
-            event: ['added', 'deleted']
-        },
-        files: [
-            '<%= paths.src %>/scss/**/*.scss'
-        ],
-        tasks: 'sassGlobber:dev'
-    }
-}
-```
+You do not need to define a watch task since version `2.0.0`. Just use the option `watch` to use the super fast build-in watcher. 
+
 
 ## License
 Copyright (c) 2015 Sebastian Fitzner. Licensed under the MIT license.

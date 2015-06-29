@@ -9,7 +9,8 @@ module.exports = function (grunt) {
 		var options = this.options({
 			sassRoot: 'resources/scss',
 			source: 'styles.scss',
-			output: 'styles.tmp.scss'
+			output: 'styles.tmp.scss',
+			watch: false
 		});
 
 		var done = this.async();

@@ -12,7 +12,8 @@ module.exports = function (grunt) {
 
 		sassGlobber: {
 			options: {
-				sassRoot: 'tmp/sass'
+				sassRoot: 'tmp/sass',
+				watch: false
 			},
 
 			dev: {
