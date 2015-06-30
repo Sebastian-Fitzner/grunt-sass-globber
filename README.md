@@ -89,21 +89,51 @@ You can enable this plugin in the `Gruntfile.js` of your project like that:
 
 `grunt.loadNpmTasks('grunt-sass-globber');`
 
-### Example
+### Examples
 
-Here is an example:
+Here is a standard grunt example with `files`:
 
 ``` js
 sassGlobber: {
 	options: {
 		sassRoot: 'tmp/sass',
-		watch: true // or false
 	},
-
 	dev: {
 		options: {
-			source: 'styles.scss',
-			output: 'styles.temp.scss'
+			watch: true // or false
+		},
+		files: {
+			'styles.tmp.scss': 'styles.scss'
+		}
+	},
+	dist: {
+		options: {
+			watch: false
+		},
+		files: {
+			'styles.tmp.scss': 'styles.scss'
+		}
+	}
+}
+```
+
+Instead of `files` you can just use the options directly: 
+
+``` js
+sassGlobber: {
+	options: {
+		sassRoot: 'tmp/sass',
+		source: 'styles.scss',
+		output: 'styles.temp.scss'
+	},
+	dev: {
+		options: {
+			watch: true // or false
+		}
+	},
+	dist: {
+		options: {
+			watch: false
 		}
 	}
 }
