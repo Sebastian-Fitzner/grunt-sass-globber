@@ -102,17 +102,17 @@ sassGlobber: {
 		options: {
 			watch: true // or false
 		},
-		files: {
+		files: [{
 			'styles.tmp.scss': 'styles.scss'
-		}
+		}]
 	},
 	dist: {
 		options: {
 			watch: false
 		},
-		files: {
+		files: [{
 			'styles.tmp.scss': 'styles.scss'
-		}
+		}]
 	}
 }
 ```
